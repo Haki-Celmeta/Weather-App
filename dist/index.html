@@ -4,11 +4,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Weather</title>
 </head>
 
 <body>
+  <div class="input-city">
+    <div>
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Select a city">
+      <div class="error-display"></div>
+    </div>
+  </div>
+
+  <div class="current-weather">
+    <div class="city-country">Tirana, Albania</div>
+    <div class="condition-text">Sunny</div>
+    <div class="condition">
+      <img class="icon" src="" alt="">
+      <div class="degree">31&deg;C</div>
+      <div class="vertical-line"></div>
+      <div class="wind-humidity-feelslike">
+        <div class="wind">Wind: 5 kmp</div>
+        <div class="humidity">Humidity: 19%</div>
+        <div class="feelslike">Feels Like: 34&deg;C</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="forecast">
+    <table>
+      <tr id="heading">
+        <th>Date</th>
+        <th>Condition</th>
+        <th>Wind</th>
+        <th>Humidity</th>
+        <th>High</th>
+        <th>Low</th>
+      </tr>
+      <tr class="forecast-date">
+        <td>04</td>
+        <td><img class="small-icon" src="" alt=""></td>
+        <td>5kmp</td>
+        <td>10%</td>
+        <td>29&deg;C</td>
+        <td>19&deg;C</td>
+      </tr>
+      <tr class="forecast-date">
+        <td>05</td>
+        <td><i class="fa-solid fa-cloud-sun-rain"></i></td>
+        <td>16kmp</td>
+        <td>60%</td>
+        <td>23&deg;C</td>
+        <td>16&deg;C</td>
+      </tr>
+      <tr class="forecast-date">
+        <td>06</td>
+        <td><i class="fa-solid fa-sun"></i></td>
+        <td>80kmp</td>
+        <td>10%</td>
+        <td>29&deg;C</td>
+        <td>19&deg;C</td>
+      </tr>
+    </table>
+  </div>
   <script src="main.js"></script>
+  <script src="https://kit.fontawesome.com/4ce7a3032b.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

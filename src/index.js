@@ -1,8 +1,24 @@
-async function getWeather() {
-  const response = await
-    fetch('https://api.weatherapi.com/v1/current.json?key=d32e343e2cba408f898102759232108&q=tirana');
-  const responseJson = await response.json();
-  console.log(responseJson.current.temp_c);
+/* eslint-disable no-unused-expressions */
+/* eslint-disable spaced-comment */
+import getCurrentWeather, { getFutureWeather } from './getWeather';
+import changeCurrentWeather, { changeFutureWeather } from './ui';
+
+const input = document.querySelector('input');
+const error = document.querySelector('.error-display');
+
+async function weather(city) {
+  const currentWeather = await getCurrentWeather(city);
+  const futureWeather = await getFutureWeather(city);
+  !currentWeather ? error.innerText = 'Cannot find' : error.innerText = '';
+  changeCurrentWeather(currentWeather);
+  changeFutureWeather(futureWeather);
+  console.log(currentWeather);
+  console.log(futureWeather);
 }
 
-getWeather();
+input.addEventListener('keyup', (e) => {
+  if (e.key === 'Enter') {
+    weather(input.value);
+    input.value = '';
+  }
+});
