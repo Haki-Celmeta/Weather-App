@@ -12,9 +12,9 @@ async function weather(city) {
   !currentWeather ? error.innerText = 'Cannot find' : error.innerText = '';
   changeCurrentWeather(currentWeather);
   changeFutureWeather(futureWeather);
-  console.log(currentWeather);
-  console.log(futureWeather);
 }
+
+weather('tirana');
 
 input.addEventListener('keyup', (e) => {
   if (e.key === 'Enter') {

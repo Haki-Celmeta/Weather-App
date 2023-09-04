@@ -28,6 +28,12 @@ function createTableRow() {
   return row;
 }
 
+function createTableHead(content) {
+  const tableHead = document.createElement('th');
+  tableHead.innerText = content;
+  return tableHead;
+}
+
 function createTableData(content) {
   const data = document.createElement('td');
   data.innerText = content;
@@ -65,12 +71,6 @@ function createFullTableRow(date, src, wind, humidity, high, low) {
   tableRow.appendChild(tableLow);
 
   return tableRow;
-}
-
-function createTableHead(content) {
-  const tableHead = document.createElement('th');
-  tableHead.innerText = content;
-  return tableHead;
 }
 
 function createTableHeading() {

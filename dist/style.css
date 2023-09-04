@@ -5,7 +5,7 @@
 }
 
 body {
-  background: url(images/background-wallpaper-2.png);
+  background: rgb(22, 21, 31);
 }
 
 .input-city {
@@ -29,6 +29,7 @@ body {
 .input-city input {
   font-size: 16px;
   padding: 8px 18px;
+  width: 400px;
 
   color: white;
 
@@ -97,10 +98,6 @@ body {
   color: white;
 
   padding: 36px;
-}
-
-tr {
-  padding: 8px;
 }
 
 th {

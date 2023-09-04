@@ -13,7 +13,7 @@ async function getCurrentWeather(city) {
 async function getFutureWeather(city) {
   try {
     const response = await
-      fetch(`https://api.weatherapi.com/v1/forecast.json?key=d32e343e2cba408f898102759232108&q=${city}&days=5`);
+      fetch(`https://api.weatherapi.com/v1/forecast.json?key=d32e343e2cba408f898102759232108&q=${city}&days=7`);
     if (!response.ok) throw new Error('Cannot find');
     const responseJson = await response.json();
     return responseJson;
