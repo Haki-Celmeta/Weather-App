@@ -59,7 +59,6 @@ body {
 
 .condition {
   display: flex;
-
   gap: 22px;
 }
 
@@ -74,6 +73,18 @@ body {
 
 .condition .degree {
   font-size: 48px;
+}
+
+.condition > div:first-child {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.condition .wind-humidity-feelslike {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .vertical-line {
@@ -93,11 +104,19 @@ body {
 .forecast {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: baseline;
+  overflow-x: auto;
+  max-width: 100%;
 
   color: white;
 
   padding: 36px;
+}
+
+.forecast table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
 }
 
 th {
@@ -114,4 +133,40 @@ th {
 .small-icon {
   width: 30px;
   height: 30px;
+}
+
+@media (max-width: 840px) {
+  .forecast {
+    padding: 36px 0px;
+  }
+}
+
+@media (max-width: 550px) {
+  .input-city {
+    padding: 30px 8px;
+  }
+
+  .input-city > div input {
+    width: 200px;
+  }
+}
+
+@media (max-width: 440px) {
+  .input-city > div input {
+    width: auto;
+  }
+
+  .current-weather {
+    padding: 16px 24px;
+  }
+
+  .condition {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .condition > div:first-child {
+    gap: 18px;
+  }
 }
